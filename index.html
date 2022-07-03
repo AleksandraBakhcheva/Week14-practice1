@@ -52,7 +52,7 @@
         <h3>Say hello!</h3>
         <label for="name">Please put you name below and click submit:</label>
         <input type="text" name="name" id="your_name" placeholder="name" />
-        <button onclick="nameInput()">Submit</button>
+        <button onclick="nameInput(), clearInput()" id="btn">Submit</button>
         <div id="say_hello"></div>
     </div>
     <div>
@@ -63,10 +63,10 @@
         <label for="number2">Second number:</label>
         <input type="number" name="number2" id="number2" placeholder="0">
         <div class="calculator">
-            <div onclick="getSum()">+</div>
-            <div onclick="getDiff()">-</div>
-            <div onclick="getDivison()">:</div>
-            <div onclick="getProd()">x</div>
+            <div onclick="getSum(), clearInput()">+</div>
+            <div onclick="getDiff(), clearInput()">-</div>
+            <div onclick="getDivison(), clearInput()">:</div>
+            <div onclick="getProd(), clearInput()">x</div>
         </div>
         <div id="total_result"></div>
     </div>

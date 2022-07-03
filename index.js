@@ -26,3 +26,8 @@ function getProd() {
     let result = +firstNum * +secondNum;
     document.getElementById('total_result').innerHTML = (`Your result = ${result}!`);
 }
+function clearInput() {
+    document.getElementById('your_name').value = "";
+    document.getElementById('number1').value = "";
+    document.getElementById('number2').value = "";
+}
