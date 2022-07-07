@@ -2,29 +2,40 @@ function nameInput() {
     let name = document.getElementById('your_name').value;
     document.getElementById('say_hello').innerHTML = (`Hello, ${name}!`);
 }
-function getSum() {
-    let firstNum = document.getElementById('number1').value;
-    let secondNum = document.getElementById('number2').value;
-    let result = +firstNum + +secondNum;
+let firstNum;
+let secondNum;
+function getNumberOne() {
+    firstNum = document.getElementById('number1').value;   
+}
+function getNumberTwo() {
+    secondNum = document.getElementById('number2').value;   
+}
+function totalResult(result) {
     document.getElementById('total_result').innerHTML = (`Your result = ${result}!`);
+}
+function getSum() {
+    getNumberOne(firstNum);
+    getNumberTwo(secondNum);
+    let result = +firstNum + +secondNum;
+    totalResult(result);
 }
 function getDiff() {
-    let firstNum = document.getElementById('number1').value;
-    let secondNum = document.getElementById('number2').value;
+    getNumberOne(firstNum);
+    getNumberTwo(secondNum);
     let result = +firstNum - +secondNum;
-    document.getElementById('total_result').innerHTML = (`Your result = ${result}!`);
+    totalResult(result);
 }
 function getDivison() {
-    let firstNum = document.getElementById('number1').value;
-    let secondNum = document.getElementById('number2').value;
+    getNumberOne(firstNum);
+    getNumberTwo(secondNum);
     let result = +firstNum / +secondNum;
-    document.getElementById('total_result').innerHTML = (`Your result = ${result}!`);
+    totalResult(result);
 }
 function getProd() {
-    let firstNum = document.getElementById('number1').value;
-    let secondNum = document.getElementById('number2').value;
+    getNumberOne(firstNum);
+    getNumberTwo(secondNum);
     let result = +firstNum * +secondNum;
-    document.getElementById('total_result').innerHTML = (`Your result = ${result}!`);
+    totalResult(result);
 }
 function clearInput() {
     document.getElementById('your_name').value = "";
